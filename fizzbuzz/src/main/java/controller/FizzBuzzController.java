@@ -1,0 +1,36 @@
+package controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import java.util.ArrayList;
+import java.util.List;
+
+@RestController
+@RequestMapping("/")
+public class FizzBuzzController {
+
+    @GetMapping("/{number}")
+    public ResponseEntity<List<String>> getFizzBuzzList(@PathVariable int number) {
+        List<String> result = new ArrayList<>();
+        for (int i = 1; i <= number; i++) {
+            result.add(getResult(i));
+        }
+        return ResponseEntity.ok(result);
+    }
+
+    public String getResult(int number) {
+        if (number % 3 == 0 && number % 5 == 0) {
+            return "FizzBuzz";
+        } else if (number % 3 == 0) {
+            return "Fizz";
+        } else if (number % 5 == 0) {
+            return "Buzz";
+        } else {
+            return String.valueOf(number);
+        }
+    }
+}

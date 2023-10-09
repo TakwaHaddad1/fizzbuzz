@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="FizzBuzzControllerTest" project="fizzbuzz" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="controllerTest.FizzBuzzControllerTest" time="0.744" displayname="FizzBuzzControllerTest" uniqueid="[engine:junit-jupiter]/[class:controllerTest.FizzBuzzControllerTest]">
+    <testcase name="testGetFizzBuzzList" classname="controllerTest.FizzBuzzControllerTest" time="0.744" displayname="testGetFizzBuzzList()" uniqueid="[engine:junit-jupiter]/[class:controllerTest.FizzBuzzControllerTest]/[method:testGetFizzBuzzList()]"/>
+  </testsuite>
+</testrun>

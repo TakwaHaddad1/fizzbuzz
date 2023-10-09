@@ -1,0 +1,19 @@
+package serviceTest;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
+
+import service.FizzBuzzService;
+
+public class FizzBuzzServiceTest {
+
+    @Test
+    public void testFizzBuzzService() {
+        FizzBuzzService fizzBuzzService = new FizzBuzzService();
+        
+        assertEquals("1", fizzBuzzService.getResult(1));
+        assertEquals("Fizz", fizzBuzzService.getResult(3));
+        assertEquals("Buzz", fizzBuzzService.getResult(5));
+        assertEquals("FizzBuzz", fizzBuzzService.getResult(15));
+    }
+}
